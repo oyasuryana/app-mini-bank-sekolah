@@ -42,8 +42,10 @@ if(!isset($_SESSION['user'])){
 								<a class="dropdown-item" href="index.php?modul=PenarikanTambah">Penarikan</a>
 							</div>
 						</li>
-						<?php } ?>
-
+						<?php } 
+						
+						if ($_SESSION['level']=='manager'){
+						?>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Laporan</a>
 							<div class="dropdown-menu">
@@ -53,11 +55,28 @@ if(!isset($_SESSION['user'])){
 								<a class="dropdown-item" href="index.php?modul=MutasiRekening">Mutasi Rekening</a>
 								<?php } 
 								if ($_SESSION['level']=='cs' || $_SESSION['level']=='manager') { ?>
-								<a class="dropdown-item" href="index.php?modul=LaporanNasabahByJK">Jml. Nasabah Per Jenis Kelamin</a>
-								<a class="dropdown-item" href="index.php?modul=LaporanNasabahByUsia">Jml. Nasabah Per Usia</a>
-								<?php } ?>
+								<a class="dropdown-item" href="index.php?modul=LaporanNasabah">Data Nasabah</a>
+								<?php 
+								}							
+							?>
 							</div>
 						</li>
+						
+						<?php } 
+						if ($_SESSION['level']=='nasabah'){
+						
+						?>
+						<li class="navbar-item">
+							<a class="nav-link" href="index.php?modul=MutasiRekeningNasabah">Mutasi Rekening</a>
+						</li>
+						
+						<li class="navbar-item">
+							<a class="nav-link" href="index.php?modul=formGantiPassword">Ganti Password</a>
+						</li>
+						
+						
+						
+						<?php } ?>
 						
 						<li class="navbar-item">
 							<a class="nav-link" href="logout.php">Logout</a>
@@ -81,6 +100,8 @@ if(!isset($_SESSION['user'])){
 					//include('telerPanel.php');					  					  
 				  }	else if ($_SESSION['level']=='manager') {
 					//include('managerPanel.php');					  					  
+				  }	else if ($_SESSION['level']=='nasabah') {
+					include('nasabahPanel.php');					  					  
 				  }	else{
 					header("Location: http://localhost/apl_tabungan/");
 				  }		
