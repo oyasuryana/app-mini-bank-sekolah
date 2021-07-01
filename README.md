@@ -1,1 +1,3 @@
-# app-mini-bank-sekolah
+# Aplikasi Mini Bank Sekolah
+
+Aplikasi ini contoh pembuatan aplikasi dengan PHP native
