@@ -7,10 +7,10 @@ Aplikasi ini contoh pembuatan aplikasi dengan PHP native
 1. Buat database dengan nama apl_tabungan 
 2. Edit file konfigurasi.php
 
-	$user='root';
-	$pass='';
-	$host='localhost';
-	$db='apl_tabungan';
+	$user	='root';
+	$pass	='';
+	$host	='localhost';
+	$db		='apl_tabungan';
 
 3. Simpan 
 4. Jalankan 
