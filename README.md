@@ -22,7 +22,10 @@ Aplikasi ini contoh pembuatan aplikasi dengan PHP native
 	Ade			123	Customer Service
 	dadi		123	Manager
 	tanti		123	teller
-
+	no Rek		Tanggal lahir	Nasabah
+	
+	Format password nasabah : YYYY-MM-DD
+	
 # Visit My Resource
 
 * Log 		:	https://ozs.web.id
