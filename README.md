@@ -5,15 +5,16 @@ Aplikasi ini contoh pembuatan aplikasi dengan PHP native
 
 # Instalasi
 1. Buat database dengan nama apl_tabungan 
-2. Edit file konfigurasi.php
+2. Import file apl_tabungan.sql
+3. Edit file konfigurasi.php
 
 	$user	='root';
 	$pass	='';
 	$host	='localhost';
 	$db		='apl_tabungan';
 
-3. Simpan 
-4. Jalankan 
+4. Simpan 
+5. Jalankan 
 
 
 # Visit My Resource
