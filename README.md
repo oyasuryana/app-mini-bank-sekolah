@@ -17,11 +17,11 @@ Aplikasi ini contoh pembuatan aplikasi dengan PHP native
 5. Jalankan 
 
 # Deafult User & Password
-	username	Password		Role
+	username	Password	Role
 	----------------------------------
-	Ade			123				Customer Service
-	dadi		123				Manager
-	tanti		123				teller
+	Ade	123	Customer Service
+	dadi	123	Manager
+	tanti	123	teller
 
 # Visit My Resource
 
