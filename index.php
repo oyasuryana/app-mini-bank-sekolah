@@ -8,7 +8,7 @@ if(!isset($_SESSION['user'])){
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Pengelolaan Tabungan Siswa</title>
+		<title>appBank @ Aplikasi Mini Bank</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no"/>		
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
