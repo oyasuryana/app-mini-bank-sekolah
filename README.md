@@ -16,6 +16,12 @@ Aplikasi ini contoh pembuatan aplikasi dengan PHP native
 4. Simpan 
 5. Jalankan 
 
+# Deafult User & Password
+	username	Password		Role
+	----------------------------------
+	Ade			123				Customer Service
+	dadi		123				Manager
+	tanti		123				teller
 
 # Visit My Resource
 
