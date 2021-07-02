@@ -27,14 +27,14 @@
 
 				<div class="form-group row">
 					<label>Password</label>
-					<input type="password" name="password" class="form-control" placeholder="Password">
+					<input type="password" name="password" class="form-control" placeholder="Password Format : YYYY-MM-DD">
 				</div>
 
 				<div class="form-group row">
 					<button type="submit" name="tbl_simpan" class="btn btn-danger btn-block">Login</button>
 				</div>	
 				
-				<label>Silahkan gunakan nomor rekening anda sebagai username !</label>	
+				<label class="text-center">Silahkan gunakan nomor rekening anda sebagai username<br/> dan tanggal lahir sebagai password awal !</label>	
 			</form>		
 	</div> <!-- row -->
 	
