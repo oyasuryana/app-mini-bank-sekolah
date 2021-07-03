@@ -9,7 +9,7 @@ if(! defined('_PROTEKSI')) {
 <p>Untuk menampilkan laporan, silahkan pilih tentukan tanggal dan jenis laporan terlebih dahulu !</p>
 <form method="POST">
 	<div class="form-group row">
-		<label class="col-md-2 font-weight-bold">Tanggal Laporan</label>
+		<label class="col-md-2 font-weight-bold">Periode Laporan</label>
 		<div class="col-md-10">
 			<input type="date" class="form-control" name="waktu_transaksi" value="<?=isset($_POST['waktu_transaksi']) ? $_POST['waktu_transaksi'] : null;?>">
 		</div>
@@ -18,8 +18,8 @@ if(! defined('_PROTEKSI')) {
 		<label class="col-md-2 font-weight-bold">Jenis Laporan</label>
 		<div class="col-md-10">
 			<select class="form-control" name="jenisLaporan">
-					<option value="simpan" <?=$_POST['jenisLaporan']=='simpan' ? 'selected':null;?>>Penerimaan</option>
-					<option value="tarik" <?=$_POST['jenisLaporan']=='tarik' ? 'selected':null;?>>Pengambilan</option>
+					<option value="simpan" <?=$_POST!=null && $_POST['jenisLaporan']=='simpan' ? 'selected':null;?>>Penerimaan</option>
+					<option value="tarik" <?=$_POST!=null && $_POST['jenisLaporan']=='tarik' ? 'selected':null;?>>Pengambilan</option>
 			 </select>
 		</div>	
 	</div>	

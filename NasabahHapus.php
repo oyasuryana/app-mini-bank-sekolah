@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $NomorRekening=$_GET['NoRekening'];
 
 $sqlHapusNasabah=mysqli_query($koneksi,"DELETE FROM dataNasabah WHERE NoRekening='$NomorRekening'") or die(mysqli_error($koneksi));
