@@ -1,4 +1,4 @@
-<h1>Tembah Nasabah</h1>
+<h1>Tambah Nasabah</h1>
 <p>Masukan data nasabah pada form dibawah ini</p>
 <form method="POST" action="index.php?modul=NasabahSimpan">
 

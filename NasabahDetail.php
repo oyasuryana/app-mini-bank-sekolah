@@ -9,23 +9,23 @@ else {$perempuan='checked' ; $laki=null;}
 
 
 ?>
-<h1>Edit Nasabah</h1>
+<h1>Update Nasabah</h1>
 <p>Masukan data nasabah pada form dibawah ini</p>
 <form method="POST" action="index.php?modul=NasabahUpdate">
 
-	<div class="form-group">
-		<label>Nomor Rekening</label>
-		<input type="text" class="form-control" value="<?php echo $dataNasabah['NoRekening'];?>" name="TxtNoRekening" readonly/>
+	<div class="">
+		<label class="col-md-2 font-weight-bold">Nomor Rekening</label>
+		<label class="col-md-8"><?php echo $dataNasabah['NoRekening'];?></label>
 	</div>
 
 	<div class="form-group">
-		<label>	Nama Nasabah</label>
-		<input type="text" class="form-control" value="<?php echo $dataNasabah['NamaNasabah'];?>"  name="TxtNamaNasabah" autocomplete="off" required/>
+		<label class="col-md-2 font-weight-bold">	Nama Nasabah</label>
+		<input type="text" class="form-control" value="<?php echo $dataNasabah['NamaNasabah'];?>"</label>
 	</div>
 
 	<div class="form-group">
-		<label>Tempat Lahir	</label>
-		<input type="text" class="form-control" value="<?php echo $dataNasabah['TempatLahir'];?>"  name="TxtTempatLahir" autocomplete="off" required/>
+		<label class="col-md-2 font-weight-bold">Tempat Lahir	</label>
+		<label><?=$dataNasabah['TempatLahir'];?></label>
 	</div>
 
 	<div class="form-group">

@@ -3,7 +3,8 @@ $sqlNasabah=mysqli_query($koneksi,"SELECT * FROM dataNasabah");
 ?>
 <h1>Data Nasabah</h1>
 <p>Berikut ini data nasabah Mini bank SMK Nusantara. </p>
-<p><a href="index.php?modul=NasabahTambah" class="btn btn-primary">Tambah</a></p>
+
+<?=$_SESSION['level']!='manager' ? '<p><a href="index.php?modul=NasabahTambah" class="btn btn-primary">Tambah</a></p>' : null;?>
 
 <table class="table table-bordered table-hovered">
 	<thead class="bg-info text-center">
@@ -15,7 +16,7 @@ $sqlNasabah=mysqli_query($koneksi,"SELECT * FROM dataNasabah");
 			<th>Tempat, Tanggal Lahir</th>
 			<th>No. Handphone</th>
 			<th>Alamat Lengkap</h>
-			<th>Aksi</th>
+			<th>Aksi</h>
 		</tr>
 	</thead>
 	<tbody>
@@ -32,12 +33,18 @@ $sqlNasabah=mysqli_query($koneksi,"SELECT * FROM dataNasabah");
 					<td>'.$dataNasabah['TempatLahir'].', '.$dataNasabah['TanggalLahir'].'</td>
 					<td>'.$dataNasabah['NoHandphone'].'</td>
 					<td>'.$dataNasabah['AlamatNasabah'].'</td>
-					<th>
-						<a href="index.php?modul=NasabahEdit&NoRekening='.$dataNasabah['NoRekening'].'" class="btn btn-info btn-sm">Edit</a>
+					<td>';
+					
+					if($_SESSION['level']!='manager'){
+						echo '	<a href="index.php?modul=NasabahEdit&NoRekening='.$dataNasabah['NoRekening'].'" class="btn btn-info btn-sm">Edit</a>
 						&nbsp; 
-						<a href="index.php?modul=NasabahHapus&NoRekening='.$dataNasabah['NoRekening'].'" class="btn btn-danger btn-sm">Hapus</a>
-					</th>
-				</tr>';
+						<a href="index.php?modul=NasabahHapus&NoRekening='.$dataNasabah['NoRekening'].'" class="btn btn-danger btn-sm">Hapus</a>';
+					} else{
+						echo '<a href="index.php?modul=NasabahDetail&NoRekening='.$dataNasabah['NoRekening'].'" class="btn btn-info btn-sm btn-block">Detail</a>';	
+					}
+						
+					
+				echo '</td></tr>';
 			}
 		?>	
 				<tr>

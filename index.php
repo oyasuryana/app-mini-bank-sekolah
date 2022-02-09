@@ -27,14 +27,21 @@ if(!isset($_SESSION['user'])){
 
 				<div class="collapse navbar-collapse" id="daftar-menu">
 					<ul class="navbar-nav">
-					<?php if ($_SESSION['level']=='cs') {?>
+						<li class="navbar-item">
+							<a class="nav-link" href="index.php">Dashboard</a>
+						</li>
+					<?php 
+						if ($_SESSION['level']=='cs') {
+						
+						?>
 						<li class="navbar-item">
 							<a class="nav-link" href="index.php?modul=NasabahTampil">Data Nasabah</a>
 						</li>
 						
 					<?php }
 					
-					if ($_SESSION['level']=='teller') {?>
+					if ($_SESSION['level']=='teller') {
+						?>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Transaksi</a>
 							<div class="dropdown-menu">
@@ -55,7 +62,7 @@ if(!isset($_SESSION['user'])){
 								<a class="dropdown-item" href="index.php?modul=MutasiRekening">Mutasi Rekening</a>
 								<?php } 
 								if ($_SESSION['level']=='cs' || $_SESSION['level']=='manager') { ?>
-								<a class="dropdown-item" href="index.php?modul=LaporanNasabah">Data Nasabah</a>
+								<a class="dropdown-item" href="index.php?modul=NasabahTampil">Data Nasabah</a>
 								<?php 
 								}							
 							?>
@@ -97,13 +104,14 @@ if(!isset($_SESSION['user'])){
 				  if($_SESSION['level']=='cs'){
 					include('csPanel.php');					  
 				  } else if ($_SESSION['level']=='teller') {
-					//include('telerPanel.php');					  					  
+					include('tellerPanel.php');					  					  
 				  }	else if ($_SESSION['level']=='manager') {
-					//include('managerPanel.php');					  					  
+					include('csPanel.php');					  
+					include('tellerPanel.php');
 				  }	else if ($_SESSION['level']=='nasabah') {
 					include('nasabahPanel.php');					  					  
 				  }	else{
-					header("Location: http://localhost/apl_tabungan/");
+					header('Location: http://localhost/apl_tabungan/');
 				  }		
 				}
 				?>
