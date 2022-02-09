@@ -33,5 +33,14 @@ Aplikasi ini contoh pembuatan aplikasi dengan PHP native
 * Academia	:	https://uniku.academia.edu/TeuWawuh		
 	
 # Screenshoot
-1. Customer Service Panel
+1. Halaman Login 
+![image](https://drive.google.com/uc?export=view&id=1di6htA7S0AntgO5lidqnCSIPhq-eLt4N)
+
+2. Customer Service Panel
 ![image](https://drive.google.com/uc?export=view&id=1IHqCdWKt9N1mE5TlaLrSBwFzF5WFUg-A)
+
+3. Telller Panel
+![image](https://drive.google.com/uc?export=view&id=19mEdp0bCBZ4VpXFzeTG9xNO3Mv0unYEH)
+
+4. Admin Panel
+![image](https://drive.google.com/uc?export=view&id=1mA6Nhm157bsVeKcUub2DwSOLUb0QGZQp)
